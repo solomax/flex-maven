@@ -29,7 +29,7 @@
 		<webcontent.base.dir>${project.basedir}/src/main</webcontent.base.dir>
 		<site.basedir>${project.parent.basedir}</site.basedir>
 		<skip.site.copy>false</skip.site.copy>
-		<flex.sdk.version>4.15.0</flex.sdk.version>
+		<flex.sdk.version>4.16.0</flex.sdk.version>
 	</properties>
             <repositories>
                 <repository>
@@ -42,6 +42,16 @@
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
+				<repository>
+					<id>jpresso</id>
+					<url>http://repository.jspresso.org/maven2/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
@@ -54,6 +64,16 @@
                         <enabled>true</enabled>
                     </snapshots>
                 </pluginRepository>
+				<pluginRepository>
+					<id>jpresso</id>
+					<url>http://repository.jspresso.org/maven2/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
             </pluginRepositories>
 	<build>
 		<sourceDirectory>src/main/flex</sourceDirectory>
@@ -62,7 +82,7 @@
 			<plugin>
 				<groupId>net.flexmojos.oss</groupId>
 				<artifactId>flexmojos-maven-plugin</artifactId>
-				<version>7.1.0</version>
+				<version>7.1.1</version>
 				<extensions>true</extensions>
 				<configuration>
 					<sourceFile>main.mxml</sourceFile>
@@ -88,7 +108,7 @@
 		<dependency>
 			<groupId>com.adobe.flash.framework</groupId>
 			<artifactId>playerglobal</artifactId>
-			<version>20.0</version>
+			<version>23.0</version>
 			<type>swc</type>
 		</dependency>
 	</dependencies>
